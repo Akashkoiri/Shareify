@@ -20,9 +20,9 @@ def get_ip(opt):
     ip = socket.gethostbyname(hostname)
     ## printing the hostname and ip_address
     if opt == 1 or opt == 'Upload' or opt == 'upload':
-        print(f"\nIP Address: {ip}/upload\n")
+        print(f"\nLink: http://{ip}/upload\n")
     elif opt == 2 or opt == 'Download' or opt == 'download':
-        print(f"\nIP Address: {ip}\n")
+        print(f"\nLink: http://{ip}\n")
     elif opt == 3:
         exit()
     else:
@@ -33,7 +33,7 @@ def runserver():
     return subprocess.run(cmd, shell=True, stdout=subprocess.PIPE)
 
 
-print('\n**Notice: Make sure your devices are connected in the same network')
+print('\n**Notice: Make sure your devices are connected to the same network')
 print('\n1. Upload\n2. download\n3. Exit')
 opt = int(input('\nWhat do you want to do:'))
 
